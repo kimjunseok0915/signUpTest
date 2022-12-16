@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>회원가입</title>
+        <meta charset="utf-8">
+        
+    <script src="signup.js"></script>
+    </head>
+
+    <body>
+        <h1 style="text-align: center; color:grey;"  >회원가입</h1>
+
+        <style>
+            .error{color: red;}
+        </style>
+        
+        <br>
+
+        <h2> <span style="color: red;">*</span>  온라인 회원가입 작성</h2>
+        
+        <hr>
+        <ul>
+            <li>고객님의 정보는 개인정보보호정책에 의해 철저하게 보호됩니다.</li>
+        </ul>
+        <hr>
+        <br>
+        <hr>
+        <div class="wrapper">
+            <div class="title"><h1 style="font-size: 21px;">회원가입</h1></div>
+            <div class="name">
+                사용자 ID <span style="color: red;">*</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="name"  type="text" > <input type="submit" value="ID 중복확인">
+
+                <div id="nameError" class="error">&nbsp;</div>
+            
+            <hr>
+            </div>
+            <div class="password">
+                비밀번호 <span style="color: red;">*</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="password" type="password" > 4~12자리의 영문, 숫자, 특수문자 (!,$,%,^&,*)만 가능
+                <div id="passwordError" class="error">&nbsp;</div>
+            </div>
+            <hr>
+            <div class="passwordCheck">
+               비밀번호 확인 <span style="color: red;">*</span>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+               <input id="passwordCheck" type="password" >
+                <div id="passwordCheckError" class="error">&nbsp;</div>
+            </div>
+            <hr>
+           
+            <div class="name">
+                성명 <span style="color: red;">*</span>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="name" type="text" > 띄어쓰기 없이 입력, 반드시 실명이어야 합니다!
+                <div id="nameError" class="error">&nbsp;</div>
+            </div> 
+            <hr>
+            <div class="email">
+                E-mail <span style="color: red;">*</span>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="email" type="text" > <strong> 메일 수신 여부</strong>
+                <div id="emailError" class="error">&nbsp;</div>
+                <div>
+                    <ul>
+                        <li><strong> 할인 이벤트정보</strong> 및 할인쿠폰, 관심분야 등 꼴 필요한 정보를 빠르게 받아보실 수 있습니다.</li>
+                        <li>비밀번호 분실시 E-mail로 화긴 해드리니, <span style="color: cadetblue;"> <strong> 정확한 E-mail주소를 기입</strong></span>해 주세요</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="zipcode">
+                우편번호 <span style="color: red;">*</span>    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="zipcode1" type="text" > &nbsp;- &nbsp; <input id="zipcode1" type="text" >&nbsp; &nbsp;<input  type="submit" value="우편번호 검색" >
+                <div id="zipcodeError" class="error">&nbsp;</div>
+            </div>
+            <hr>
+            <div class="address">
+                주소<span style="color: red;">*</span>     &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="address" type="text" > <br>      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="zipcode1" type="text">
+                <div id="addressError" class="error">&nbsp;</div>
+            </div>
+            <hr>
+            <div class="phone">
+                전화번호 <span style="color: red;">*</span>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <input id="phone1" type="text" size="1" maxlength="3" oninput="changePhone1()" onkeypress="return checkNumber(event)"> -
+                <input id="phone2" type="text" size="3" maxlength="4" oninput="changePhone2()" onkeypress="return checkNumber(event)"> -
+                <input id="phone3" type="text" size="3" maxlength="4" oninput="changePhone3()" onkeypress="return checkNumber(event)">
+    
+            </div>
+            <hr>
+            
+    
+           
+            <div class="signUp">
+                <button id="signUpButton"  onclick="signUpCheck()">다음</button>
+            </div>
+        </div>
+        
+    </body>
+</html>
